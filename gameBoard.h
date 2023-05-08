@@ -17,6 +17,10 @@ class gameBoard
     public:
     gameBoard();
 
+    ~gameBoard();
+
+    void printGameBoard();
+
     protected:
     vector<tile> data;
 };
