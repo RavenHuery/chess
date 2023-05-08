@@ -20,6 +20,16 @@ gameBoard::gameBoard()
     blackTile 5a, 5c, 5e, 5g, 6b, 6d, 6f, 6h;
     blackTile 7a, 7c, 7e, 7g, 8b, 8d, 8f, 8h;
 
-    
+
+    //What I'm trying to do here is create a matrix of 
+    //tiles in the 8x8 pattern that you usually see chess
+    //boards in. I could work row by row... hmm...
+    for (int i = 0; i > 8; i++)
+    {
+        for (int j = 0; j > 8; j++)
+        {
+
+        }
+    }    
 
 }
