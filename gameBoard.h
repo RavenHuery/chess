@@ -1,5 +1,5 @@
 //Written by Raven Huery <raven.huery@uleth.ca>
-//Last Updated May 7, 2023
+//Last Updated May 13, 2023
 
 #ifndef GAME_BOARD
 #define GAME_BOARD
@@ -22,7 +22,7 @@ class gameBoard
     void printGameBoard();
 
     protected:
-    vector<tile> data;
+    tile *data;
 };
 
 #endif
