@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <iomanip>
 
 #include "gameboard.h"
 
@@ -12,9 +13,9 @@ gameBoard::gameBoard()
 {
     data = new tile[64];
 
-    for (int i = 0; i < 8; i++)
+    for (int i = 0; i < 8; i++) //For loop for each row
     {
-        for (int j = 0; j < 8; j++)
+        for (int j = 0; j < 8; j++) //For loop for each position in row
         {
             if (i % 2 == 1) //If i is an odd number
             {
@@ -40,27 +41,22 @@ gameBoard::gameBoard()
             }
         }
     }
+}
 
-    //whiteTile 1b, 1d, 1f, 1h, 2a, 2c, 2e, 2g;
-    //whiteTile 3b, 3d, 3f, 3h, 4a, 4c, 4e, 4g;
-    //whiteTile 5b, 5d, 5f, 5h, 6a, 6c, 6e, 6g;
-    //whiteTile 7b, 7d, 7f, 7h, 8a, 8c, 8e, 8g;
+gameBoard::~gameBoard()
+{
+    delete [] data;
+}
 
-    //blackTile 1a, 1c, 1e, 1g, 2b, 2d, 2f, 2h;
-    //blackTile 3a, 3c, 3e, 3g, 4b, 4d, 4f, 4h;
-    //blackTile 5a, 5c, 5e, 5g, 6b, 6d, 6f, 6h;
-    //blackTile 7a, 7c, 7e, 7g, 8b, 8d, 8f, 8h;
-
-
-    //What I'm trying to do here is create a matrix of 
-    //tiles in the 8x8 pattern that you usually see chess
-    //boards in. I could work row by row... hmm...
-    //for (int i = 0; i > 8; i++)
-    //{
-    //    for (int j = 0; j > 8; j++)
-    //    {
-    //
-    //    }
-    //}    
-
+void gameBoard::printGameBoard()
+{
+    for (int i = 0; i < 8; i++)
+    {
+        for (int j = 0; j < 8; j++)
+        {
+            cout << setw(1) << data[i*8 + j].tileType;
+        }
+        cout << '\n';
+    }
+    cout << endl;
 }
