@@ -12,7 +12,7 @@ gameBoard::gameBoard()
 {
     data = new tile[64];
 
-    for (int i = 1; i < 9; i++)
+    for (int i = 0; i < 8; i++)
     {
         for (int j = 0; j < 8; j++)
         {
@@ -20,22 +20,22 @@ gameBoard::gameBoard()
             {
                 if (j % 2 == 1) //black, white, black, white ...
                 {
-
+                    data[i*8 + j].tileType = '■';
                 }
                 else //white, black, white, black ...
                 {
-
+                    data[i*8 + j].tileType = '□';
                 }
             }
             else //If i is an even number 
             {
                 if (j % 2 == 1) //white, black, white, black ...
                 {
-
+                    data[i*8 + j].tileType = '□';
                 }
                 else //black, white, black, white
                 {
-                    
+                    data[i*8 + j].tileType = '■';
                 }
             }
         }
