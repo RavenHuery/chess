@@ -9,7 +9,7 @@
 
 using namespace std;
 
-int main (){
+int main(){
     gameBoard test;
 
     test.printGameBoard();
